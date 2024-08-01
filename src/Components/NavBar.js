@@ -11,14 +11,17 @@ const Navbar = () => {
       const { token } = JSON.parse(localStorage.getItem("userData"));
       const payload = { token };
 
-      const response = await fetch("http://localhost:8000/api/auth/logout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://technotes-api.onrender.comapi/auth/logout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
       if (response.ok) {
         toast.success("Logout successful!");
         localStorage.clear();

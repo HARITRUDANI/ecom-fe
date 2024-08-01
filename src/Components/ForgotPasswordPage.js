@@ -15,7 +15,7 @@ const ForgotPasswordPage = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:8000/api/auth/forgot-password",
+        "https://technotes-api.onrender.comapi/auth/forgot-password",
         {
           method: "POST",
           headers: {

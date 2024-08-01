@@ -44,7 +44,7 @@ const SetPasswordPage = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/auth/reset-password",
+        "https://technotes-api.onrender.comapi/auth/reset-password",
         {
           method: "POST",
           headers: {

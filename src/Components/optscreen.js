@@ -17,7 +17,7 @@ const VerifyOtpPage = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:8000/api/auth/verify-otp",
+        "https://technotes-api.onrender.comapi/auth/verify-otp",
         {
           method: "POST",
           headers: {

@@ -16,7 +16,7 @@ const Products = () => {
       const token = userData ? userData.token : null;
 
       fetch(
-        `http://localhost:8000/api/products/products?page=${currentPage}&limit=${productsPerPage}`,
+        `https://technotes-api.onrender.comapi/products/products?page=${currentPage}&limit=${productsPerPage}`,
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ const Products = () => {
     }
 
     fetch(
-      `http://localhost:8000/api/products/edit/product/${editedProduct._id}`,
+      `https://technotes-api.onrender.comapi/products/edit/product/${editedProduct._id}`,
       {
         method: "PUT",
         headers: {
@@ -110,7 +110,7 @@ const Products = () => {
       return;
     }
 
-    fetch(`http://localhost:8000/api/products/${id}`, {
+    fetch(`https://technotes-api.onrender.comapi/products/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${token}`,

@@ -60,7 +60,7 @@ const AddProducts = () => {
       };
 
       const response = await fetch(
-        "http://localhost:8000/api/products/add/product",
+        "https://technotes-api.onrender.comapi/products/add/product",
         {
           method: "POST",
           headers: {
