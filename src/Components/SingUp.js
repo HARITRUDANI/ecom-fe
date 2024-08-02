@@ -31,16 +31,13 @@ const SignupPage = () => {
       const { name, email, password } = formData;
       const payload = { username: name, email, password };
 
-      const response = await fetch(
-        "https://technotes-api.onrender.comapi/auth/signup",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await fetch("http://localhost:8000/api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
       const data = await response.json();
 
       if (response.ok) {
